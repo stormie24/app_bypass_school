@@ -1,42 +1,5 @@
 {
-    "name": "danielbachhuber/composer-lock-updater",
-    "description": "Run composer-lock-updater in your CI system for bot-powered composer.lock pull requests.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Daniel Bachhuber",
-            "email": "daniel@handbuilt.co"
-        }
-    ],
-    "require": {},
-    "require-dev": {
-        "satooshi/php-coveralls": "~1",
-        "phpunit/php-code-coverage": "~2|~4",
-        "squizlabs/php_codesniffer": "^2.7"
-    },
-    "bin": [
-        "bin/clu"
-    ],
-    "autoload": {
-        "psr-4": {"CLU\\": "src/"}
-    },
-    "scripts": {
-        "lint": "find src -name '*.php' -exec php -l {} \\;",
-        "cs": "phpcs -n src",
-        "cbf": "phpcbf -n src",
-        "unit": "echo tbd: phpunit --colors=always",
-        "test": [
-            "@unit",
-            "@cs",
-            "@lint"
-        ]
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "5.6"
-        }
+    "require": {
+        "monolog/monolog": "2.0.*"
     }
 }
